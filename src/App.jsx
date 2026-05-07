@@ -8,8 +8,7 @@ import {
 import { RadioTower, RotateCcw, Send } from "lucide-react";
 import "./App.css";
 
-const geoUrl = "/countries-110m.json";
-
+const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
 const REGIONS = {
   EU: {
     label: "Europe",
