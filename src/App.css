@@ -1,0 +1,284 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #020617;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button,
+select {
+  font: inherit;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 32px;
+}
+
+.header {
+  max-width: 1350px;
+  margin: 0 auto 24px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: flex-end;
+}
+
+.small-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #cbd5e1;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 14px;
+}
+
+h1 {
+  margin: 12px 0;
+  font-size: 42px;
+}
+
+p {
+  color: #cbd5e1;
+}
+
+.reset-button,
+.predict-button {
+  border: 0;
+  border-radius: 18px;
+  padding: 14px 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.reset-button {
+  background: white;
+  color: #020617;
+}
+
+.layout {
+  max-width: 1500px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+}
+.map-card,
+.panel-card {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 28px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+}
+
+.map-card {
+  position: relative;
+  height: 520px;
+  overflow: hidden;
+  background: #2f9ec5;
+}
+
+.react-map {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.mode-box {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+  background: rgba(2, 6, 23, 0.88);
+  border-radius: 18px;
+  padding: 14px 18px;
+  backdrop-filter: blur(6px);
+}
+
+.mode-box span {
+  display: block;
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.mode-box strong {
+  display: block;
+  margin-top: 4px;
+  font-size: 22px;
+}
+
+.hover-label {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+  background: white;
+  color: #020617;
+  border-radius: 18px;
+  padding: 14px 18px;
+  font-weight: bold;
+}
+
+.us-marker {
+  cursor: pointer;
+}
+
+.us-marker circle {
+  stroke: white;
+  stroke-width: 2;
+}
+
+.us-marker text {
+  fill: white;
+  font-size: 15px;
+  font-weight: bold;
+  paint-order: stroke;
+  stroke: #020617;
+  stroke-width: 4px;
+}
+
+.side-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.panel-card {
+  padding: 24px;
+}
+
+.panel-card h2 {
+  margin-top: 0;
+}
+
+.tx-rx-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.tx-rx-grid button {
+  border: 1px solid #334155;
+  background: #020617;
+  color: white;
+  border-radius: 18px;
+  padding: 14px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.tx-rx-grid button span {
+  display: block;
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.tx-rx-grid button strong {
+  display: block;
+  margin-top: 4px;
+}
+
+.tx-rx-grid .active-choice {
+  background: white;
+  color: #020617;
+}
+
+label {
+  display: block;
+  margin-bottom: 18px;
+  color: #cbd5e1;
+}
+
+select {
+  width: 100%;
+  margin-top: 8px;
+  padding: 14px;
+  border-radius: 16px;
+  border: 1px solid #334155;
+  background: #020617;
+  color: white;
+}
+
+.predict-button {
+  width: 100%;
+  justify-content: center;
+  background: #3b82f6;
+  color: white;
+}
+
+.predict-button:disabled {
+  background: #334155;
+  cursor: not-allowed;
+}
+
+.code-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.code-grid div,
+pre {
+  background: #020617;
+  border-radius: 14px;
+  padding: 12px;
+  color: #bfdbfe;
+}
+
+pre {
+  overflow-x: auto;
+}
+
+.empty-message {
+  color: #cbd5e1;
+}
+
+.prediction-box {
+  margin-top: 18px;
+  background: white;
+  color: #020617;
+  border-radius: 22px;
+  padding: 18px;
+}
+
+.prediction-box span {
+  color: #64748b;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.prediction-box strong {
+  display: block;
+  font-size: 42px;
+  margin-top: 4px;
+}
+
+.prediction-box p {
+  color: #475569;
+}
+
+@media (max-width: 1000px) {
+  .header,
+  .layout {
+    display: block;
+  }
+
+  .reset-button {
+    margin-top: 16px;
+  }
+
+  .side-panel {
+    margin-top: 24px;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+}
